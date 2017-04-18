@@ -10,15 +10,22 @@ public class GoodsApp {
 
 		Goods[] goods = new Goods[COUNT_GOODS];
 
-		// 상품 입력
+		
 		for (int i = 0; i < COUNT_GOODS; i++) {
 			String name = scanner.next();
 			int price = scanner.nextInt();
 			int countStock = scanner.nextInt();
-
+			
+			goods[i] = new Goods(name,price,countStock);
+			
+		}
+		
+		for(Goods g : goods){
+			g.showGoods();
+			
 		}
 
-		// 자원정리
+		
 		scanner.close();
 	}
 }
